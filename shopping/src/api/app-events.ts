@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
-import CustomerService from '../services/customer-service';
+import CustomerService from '../services/shopping-service';
 
 export default (app: express.Application): void => {
   const service: any = new CustomerService();
@@ -10,7 +10,7 @@ export default (app: express.Application): void => {
     // Handle subscribe events
     service.SubscribeEvents(payload);
 
-    console.log('============= customer ================');
+    console.log('============= Shopping ================');
     console.log(payload);
     res.json(payload);
   });
