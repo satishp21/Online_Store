@@ -28,14 +28,14 @@ const options = {
         in: 'header',
         name: 'Authorization',
       },
-    }
+    },
   },
   security: [
     {
-      BearerAuth: []
+      BearerAuth: [],
     },
   ],
-  apis: ['./src/routes/*.ts','./dist/routes/*.js'], // Specify the path to your API routes files
+  apis: ['./src/routes/*.ts', './dist/routes/*.js'], // Specify the path to your API routes files
 };
 
 const specs = swaggerJsdoc(options);
